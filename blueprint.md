@@ -26,7 +26,8 @@ The website is a single-page application with the following sections:
 5.  **Schedule:** A section for his upcoming events and appearances.
 6. **Disqus Comment Section:** A dedicated area for fans to leave comments and interact, powered by Disqus.
 7. **Fortune Telling (Saju):** A fun, interactive section where fans can "see their fortune" with Park Ji-hoon (links to community or a themed experience).
-8. **Footer:** A simple footer with copyright information.
+8. **Google AdSense:** Integrated Google AdSense for site monetization, including the required script and `ads.txt`.
+9. **Footer:** A simple footer with copyright information.
 
 ## **4. Technical Implementation**
 
