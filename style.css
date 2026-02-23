@@ -1,19 +1,20 @@
-/* Basic Styles */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+
+/* Ghibli-inspired Styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #121212;
-    color: #fff;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #E0F7FA; /* Light Sky Blue */
+    color: #3E2723; /* Dark Brown */
     margin: 0;
     line-height: 1.6;
 }
 
 h2 {
     font-size: 2.5rem;
-    color: #4A90E2;
+    color: #2E7D32; /* Forest Green */
     text-align: center;
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    font-weight: 700;
 }
 
 /* Header & Navigation */
@@ -21,9 +22,10 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -33,25 +35,26 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #3E2723;
     text-decoration: none;
     margin: 0 1.5rem;
     font-size: 1.2rem;
+    font-weight: 700;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #4A90E2;
+    color: #E65100; /* Bright Orange */
 }
 
 /* Main Content */
 main {
-    padding-top: 60px; /* Adjust for fixed header */
+    padding-top: 60px;
 }
 
 section {
     padding: 4rem 2rem;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #BCAAA4; /* Light Brown */
 }
 
 /* Introduction Section */
@@ -61,18 +64,19 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('images/park-jihoon-main.jpg') no-repeat center center/cover;
+    background: url('images/ghibli-day.jpg') no-repeat center center/cover;
+    color: #fff;
 }
 
 #intro h1 {
-    font-size: 5rem;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
 }
 
 /* Filmography Section */
 #filmography {
-    background-color: #1a1a1a;
+    background-color: #FFF3E0; /* Creamy White */
 }
 
 .filmography-grid {
@@ -81,16 +85,43 @@ section {
     gap: 2rem;
 }
 
-/* Activities & Schedule */
-#activities, #schedule {
-    background-color: #121212;
+/* Redefine film-card to match the new style */
+film-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Saju Section */
+film-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Activities & Schedule */
+#activities, #schedule {
+    background-color: #E8F5E9; /* Light Green */
+}
+
+.activity-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.activities-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Global Fan Community Section */
 #saju {
     padding: 6rem 2rem;
     text-align: center;
-    background: url('images/oriental-background.jpg') no-repeat center center/cover;
+    background: url('images/ghibli-night.jpg') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -104,7 +135,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
     z-index: 1;
 }
 
@@ -121,17 +152,17 @@ section {
 
 #saju h2 {
     font-size: 3rem;
-    color: #FFD700; /* Gold color for a mystical feel */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    color: #FFECB3; /* Light Yellow */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     margin: 0;
 }
-
 
 /* Footer */
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #1a1a1a;
+    background-color: #A1887F; /* Muted Brown */
+    color: #fff;
 }
 
 /* Responsive Design */
@@ -151,5 +182,9 @@ footer {
 
     #saju h2 {
         font-size: 2.5rem;
+    }
+
+    .activities-container {
+        grid-template-columns: 1fr;
     }
 }
