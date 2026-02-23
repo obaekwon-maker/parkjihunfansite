@@ -190,8 +190,14 @@ film-card:hover {
     box-shadow: 0 12px 24px var(--card-shadow);
 }
 
-#activities, #schedule {
+#activities, #schedule, #disqus-container {
     background-color: var(--section-bg-2);
+}
+
+#disqus-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
 }
 
 .activity-card, .schedule-list li {

@@ -9,7 +9,8 @@
 </head>
 <body>
     <div id="preview-notice">
-        <h1>웹사이트가 바로 여기입니다! 이 창이 결과물입니다.</h1>
+        <h1>웹사이트가 바로 여기입니다! 이 창이 결과물입니다.</h1>1
+        
     </div>
 
     <header>
@@ -18,7 +19,8 @@
             <a href="#filmography">필모그래피</a>
             <a href="#activities">활동</a>
             <a href="#schedule">스케줄</a>
-            <a href="#saju">글로벌 팬 커뮤니티</a>
+            <a href="#disqus-container">커뮤니티</a>
+            <a href="#saju">사주 보기</a>
         </nav>
         <div class="theme-switcher">
             <span>☀️</span>
@@ -86,10 +88,33 @@
                 <li><span>2024.10.20</span> 솔로 앨범 발매</li>
             </ul>
         </section>
+
+        <section id="disqus-container">
+            <h2>팬들의 공간</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://parkjihun-fansite.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
         
         <section id="saju">
             <a href="https://cafe.daum.net/park-jihoon" target="_blank">
-                <h2>글로벌 팬 커뮤니티 가입하기</h2>
+                <h2>박지훈과 함께하는 사주 보기 (커뮤니티)</h2>
             </a>
         </section>
     </main>

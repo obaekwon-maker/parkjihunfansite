@@ -24,8 +24,9 @@ The website is a single-page application with the following sections:
 3.  **Filmography:** A section showcasing his work, presented as interactive cards.
 4.  **Activities:** A summary of his career as both an actor and a singer.
 5.  **Schedule:** A section for his upcoming events and appearances.
-6.  **Global Fan Community:** A section linking to his official global fan community.
-7.  **Footer:** A simple footer with copyright information.
+6. **Disqus Comment Section:** A dedicated area for fans to leave comments and interact, powered by Disqus.
+7. **Fortune Telling (Saju):** A fun, interactive section where fans can "see their fortune" with Park Ji-hoon (links to community or a themed experience).
+8. **Footer:** A simple footer with copyright information.
 
 ## **4. Technical Implementation**
 
@@ -34,6 +35,9 @@ The website is a single-page application with the following sections:
     *   An HTML switch is added to the header in `index.html`.
     *   CSS in `style.css` uses custom properties (variables) for colors. A `[data-theme='dark']` attribute selector is used to apply the dark mode palette.
     *   JavaScript in `main.js` handles the logic for toggling the `data-theme` attribute on the `<body>` element and saving the user's preference in `localStorage`.
+*   **Disqus Integration:**
+    *   Disqus universal embed code is added to `index.html` above the Saju section.
+    *   Styled with CSS to ensure it matches the Ghibli theme.
 *   **Deployment:** The final site will be pushed to the `main` branch of the GitHub repository.
 
 ## **5. Development Plan (Current)**
@@ -44,7 +48,13 @@ The website is a single-page application with the following sections:
 *   Refactor `style.css` to use CSS variables for colors and add a dark mode color scheme under a `[data-theme='dark']` selector.
 *   Write JavaScript in `main.js` to manage theme toggling and persist the choice using `localStorage`.
 
-### **Phase 2: Deployment**
+### **Phase 2: Implement Disqus & Saju Section**
+*   Add Disqus thread container and script to `index.html`.
+*   Update the `saju` section to reflect "Fortune Telling" more accurately.
+*   Add styles for the Disqus section in `style.css`.
+
+### **Phase 3: Deployment**
+
 *   Commit all changes to the Git repository.
 *   Push the updated code to the `main` branch on GitHub.
 *   Inform the user about the update and deployment.
