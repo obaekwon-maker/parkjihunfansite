@@ -5,40 +5,42 @@ class FilmCard extends HTMLElement {
     }
 
     connectedCallback() {
+        const image = this.getAttribute('image');
+        const title = this.getAttribute('title');
+        const description = this.getAttribute('description');
+
         this.shadowRoot.innerHTML = `
             <style>
                 .card {
-                    background-color: #2a2a2a;
-                    border-radius: 10px;
+                    border-radius: 15px;
                     overflow: hidden;
-                    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-                    transition: transform 0.3s, box-shadow 0.3s;
-                }
-                .card:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                    background-color: var(--card-bg, #fff);
+                    color: var(--text-color, #3E2723);
                 }
                 img {
                     width: 100%;
-                    height: auto;
+                    height: 200px;
+                    object-fit: cover;
                 }
                 .content {
                     padding: 1.5rem;
                 }
                 h3 {
-                    margin-top: 0;
+                    margin: 0 0 0.5rem 0;
                     font-size: 1.5rem;
-                    color: #4A90E2;
+                    color: var(--title-color, #2E7D32);
                 }
                 p {
-                    color: #ccc;
+                    margin: 0;
+                    font-size: 1rem;
                 }
             </style>
             <div class="card">
-                <img src="${this.getAttribute('image')}" alt="${this.getAttribute('title')}">
+                <img src="${image}" alt="${title}">
                 <div class="content">
-                    <h3>${this.getAttribute('title')}</h3>
-                    <p>${this.getAttribute('description')}</p>
+                    <h3>${title}</h3>
+                    <p>${description}</p>
                 </div>
             </div>
         `;
@@ -46,3 +48,26 @@ class FilmCard extends HTMLElement {
 }
 
 customElements.define('film-card', FilmCard);
+
+// Theme Switcher Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        document.body.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            themeToggle.checked = true;
+        }
+    }
+
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
