@@ -1,14 +1,95 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Ji-hoon Fan Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div id="preview-notice">
+        <h1>웹사이트가 바로 여기입니다! 이 창이 결과물입니다.</h1>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#intro">소개</a>
+            <a href="#filmography">필모그래피</a>
+            <a href="#activities">활동</a>
+            <a href="#schedule">스케줄</a>
+            <a href="#saju">오늘의 사주</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <h1>PARK JI-HOON</h1>
+                <p>배우 박지훈의 팬사이트에 오신 것을 환영합니다.</p>
+            </div>
+        </section>
+
+        <section id="filmography">
+            <h2>필모그래피</h2>
+            <div class="filmography-grid">
+                <film-card 
+                    image="images/weak-hero-class-1.jpg" 
+                    title="약한영웅 Class 1"
+                    description="2022 | Yeon Si-eun">
+                </film-card>
+                <film-card 
+                    image="images/at-a-distance-spring-is-green.jpg" 
+                    title="멀리서 보면 푸른 봄"
+                    description="2021 | Yeo Jun">
+                </film-card>
+                <film-card 
+                    image="images/love-revolution.jpg" 
+                    title="연애혁명"
+                    description="2020 | Gong Ju-yeong">
+                </film-card>
+                <film-card 
+                    image="images/flower-crew.jpg" 
+                    title="조선혼담공작소 꽃파당"
+                    description="2019 | Go Young-soo">
+                </film-card>
+            </div>
+        </section>
+
+        <section id="activities">
+            <h2>배우/가수 활동</h2>
+            <div class="activities-container">
+                <div class="activity-card">
+                    <h3>배우</h3>
+                    <p>박지훈은 아역 배우로 데뷔하여 탄탄한 연기력을 쌓아왔습니다. 2019년 '조선혼담공작소 꽃파당'을 시작으로 성인 연기자로서 본격적인 활동을 시작했으며, '연애혁명', '멀리서 보면 푸른 봄' 등 다양한 작품에서 주연을 맡아 연기 스펙트럼을 넓혀가고 있습니다. 특히, 2022년 '약한영웅 Class 1'에서는 섬세하고 깊이 있는 연기로 큰 호평을 받았습니다.</p>
+                </div>
+                <div class="activity-card">
+                    <h3>가수</h3>
+                    <p>박지훈은 2017년 Mnet의 서바이벌 프로그램 '프로듀스 101 시즌 2'에 참가하여 최종 2위로 보이 그룹 워너원(Wanna One)의 멤버로 데뷔했습니다. 워너원 활동 종료 후, 2019년 솔로 가수로 데뷔하여 다수의 앨범을 발매하며 음악 활동을 이어가고 있습니다. 매력적인 보이스와 뛰어난 퍼포먼스로 많은 사랑을 받고 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2>앞으로의 스케줄</h2>
+            <ul class="schedule-list">
+                <li><span>2024.08.15</span> 팬미팅: "My Collection"</li>
+                <li><span>2024.09.01</span> 새 드라마 "환상연가" 첫 방송</li>
+                <li><span>2024.10.20</span> 솔로 앨범 발매</li>
+            </ul>
+        </section>
+        
+        <section id="saju">
+            <a href="https://www.koreabaseball.com/" target="_blank">
+                <h2>오늘의 사주 보기</h2>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Park Ji-hoon Fan Site</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
